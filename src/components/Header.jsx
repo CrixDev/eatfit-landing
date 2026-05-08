@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Menu, X, Download } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const links = [
   { label: "Productos", href: "productos" },
@@ -40,13 +41,13 @@ function Header() {
         </nav>
 
         <div className="hidden md:block">
-          <button
-            onClick={() => handleClick("cta")}
+          <Link
+            to="/login"
             className="inline-flex items-center gap-2 rounded-full bg-accent-500 px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-accent-600 hover:shadow-md active:scale-95"
           >
             <Download size={16} strokeWidth={2.5} />
-            Descargar app
-          </button>
+            Probar demo
+          </Link>
         </div>
 
         <button
@@ -70,13 +71,13 @@ function Header() {
                 {l.label}
               </button>
             ))}
-            <button
-              onClick={() => handleClick("cta")}
+            <Link
+              to="/login"
               className="mt-2 inline-flex items-center justify-center gap-2 rounded-full bg-accent-500 px-5 py-2.5 text-sm font-semibold text-white"
             >
               <Download size={16} strokeWidth={2.5} />
-              Descargar app
-            </button>
+              Probar demo
+            </Link>
           </div>
         </div>
       )}

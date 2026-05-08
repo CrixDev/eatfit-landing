@@ -1,4 +1,5 @@
 import { Salad, Sparkles, ArrowRight, PlayCircle } from "lucide-react";
+import { Link } from "react-router-dom";
 import ProductCard from "./ProductCard";
 import { productos } from "../data/productos";
 
@@ -41,13 +42,13 @@ function Hero() {
           </p>
 
           <div className="mt-8 flex flex-wrap items-center gap-4">
-            <button
-              onClick={() => scrollTo("cta")}
+            <Link
+              to="/login"
               className="inline-flex items-center gap-2 rounded-full bg-brand-500 px-6 py-3.5 text-sm font-semibold text-white shadow-lg shadow-brand-500/25 transition hover:bg-brand-600 hover:shadow-xl active:scale-95"
             >
-              Comenzar gratis
+              Probar demo
               <ArrowRight size={16} strokeWidth={2.5} />
-            </button>
+            </Link>
             <button
               onClick={() => scrollTo("como-funciona")}
               className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-6 py-3.5 text-sm font-semibold text-slate-700 transition hover:border-slate-300 hover:bg-slate-50"
